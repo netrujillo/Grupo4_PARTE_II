@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JS HTML DOM - Avanzado</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <title>Grupo Nro.</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap 4 Template For Software Startups">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="../assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/dark.min.css">
+    <link rel="stylesheet" href="../assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="docs-page">
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="../index.html"><img class="logo-icon me-2"
+                                src="../assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">Grupo <span
+                                    class="text-alt">Nro. 4 </span></span></a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://youtu.be/iaLiOXXR8eI" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>DOM Avanzado</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">DOM Animations</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">DOM Events</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">DOM Event Listener</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">DOM Navegation</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">DOM Nodes</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">DOM Collections</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-7">DOM Node Lists</a></li>
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">JS HTML DOM - Avanzado <span class="docs-time">Última Actualización: 06/06/2023  </span></h1>
+                        <section class="docs-intro" id="item-1-0">
+                            <p>Las siglas DOM significan Document Object Model, o lo que es lo mismo, la estructura del documento HTML. Una página HTML está formada por múltiples etiquetas HTML, anidadas una dentro de otra, formando un árbol de etiquetas relacionadas entre sí, que se denomina árbol DOM (o simplemente DOM).</p>
+                        </section>
+                        
+						
+                        <section class="docs-intro" id="item-1-0">
+                            <p>En Javascript, cuando nos referimos al DOM nos referimos a esta estructura, que podemos modificar de forma dinámica desde Javascript, añadiendo nuevas etiquetas, modificando o eliminando otras, cambiando sus atributos HTML, añadiendo clases, cambiando el contenido de texto, etc...
+
+                            Al estar "amparado" por un lenguaje de programación, todas estas tareas se pueden automatizar, incluso indicando que se realicen cuando el usuario haga acciones determinadas, como por ejemplo: pulsar un botón, mover el ratón, hacer click en una parte del documento, escribir un texto, etc... </p>
+                        </section>
+
+                        <!--//docs-intro-->
+
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded">
+                                <code class="javascript hljs">
+                                !HOLA MUNDO!
+                                </code>
+                            </pre>
+                        </div>
+                        <!--//docs-code-block-->
+
+
+                    </header>
+
+                    <section class="docs-section" id="item-1-1">
+                        <h2 class="section-heading">DOM Animations</h2>
+                        <p>Las animaciones de JavaScript se realizan mediante la programación de cambios graduales en el estilo de un elemento.
+
+                        Los cambios son llamados por un temporizador. Cuando el intervalo del temporizador es pequeño, la animación parece continua.
+
+                        Ejemplo:
+                        </p>
+                   
+                    <div class="docs-code-block">
+                    <pre class="shadow-lg rounded">
+                    <code class="javascript hljs">
+function myMove() {
+    let id = null;
+    const elem = document.getElementById("animate");   
+    let pos = 0;
+    clearInterval(id);
+    id = setInterval(frame, 5);
+    function frame() {
+    if (pos == 250) {
+        clearInterval(id);
+        elem.classList.add("circle");
+        id = setInterval(reverseFrame, 5);
+    } else {
+        pos++; 
+        elem.style.top = pos + "px"; 
+        elem.style.left = pos + "px"; 
+        }
+    }
+
+  function reverseFrame() {
+    if (pos == 0) {
+        clearInterval(id);
+        elem.classList.remove("circle");
+    } else {
+        pos--;
+        elem.style.top = pos + "px";
+        elem.style.left = pos + "px";
+    }
+  }
+}
+                    </code>
+                    </pre>
+                    </div>
+
+                    <style>
+                    #container {
+                      width: 300px;
+                      height: 300px;
+                      position: relative;
+                      background: steelblue;
+                    }
+                    #animate {
+                      width: 50px;
+                      height: 50px;
+                      position: absolute;
+                      background-color: lightblue;
+                    }
+                    #animate.circle {
+                      border-radius: 50%;
+                      transition: border-radius 0.5s ease-in-out;
+                    }
+                    </style>
+
+                    <p><button type="button" onclick="myMove()">Click aquí</button></p> 
+
+                    <div id="container">
+                      <div id="animate"></div>
+                    </div>
+                    </section>
+
+                    <section class="docs-section" id="item-1-2">
+                        <h2 class="section-heading">DOM Events</h2>
+                        <p>Los eventos <b>onmousedown, onmouseupy y onclickson</b> son todos partes de un clic del mouse. Primero, cuando se hace clic en un botón del mouse, se activa el evento onmousedown, luego, cuando se suelta el botón del mouse, se activa el evento onmouseup, finalmente, cuando se completa el clic del mouse, se activa el evento onclick.
+
+                        Ejemplo:
+                        </p>
+
+                    <div class="docs-code-block">
+                    <pre class="shadow-lg rounded">
+                    <code class="javascript hljs">
+function mDown(obj) {
+    obj.style.backgroundColor = "lightblue";
+    obj.style.borderRadius = "50%";
+    obj.innerHTML = "Suéltame";
+    }
+
+function mUp(obj) {
+    obj.style.backgroundColor="steelblue";
+    obj.style.borderRadius = "";
+    obj.innerHTML="Gracias :)";
+}
+                    </code>
+                    </pre>
+                    </div>
+
+                    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+                    style="background-color:lightgreen;width:250px;height:70px;text-align: center; padding-top: 20px;color: black; cursor: pointer;">
+                    Click aquí</div>
+                    </section>
+
+                    <section class="docs-section" id="item-1-3">
+                        <h2 class="section-heading">DOM Event Listener</h2>
+                        <p>El addEventListener()método le permite agregar detectores de eventos en cualquier objeto HTML DOM, como elementos HTML, el documento HTML, el objeto de ventana u otros objetos que admitan eventos, como el xmlHttpRequestobjeto.
+
+                        Ejemplo:
+                        </p>
+                    
+
+                    <div class="docs-code-block">
+                    <pre class="shadow-lg rounded">
+                    <code class="javascript hljs">
+c2.addEventListener('mouseenter', pintar); 
+    function pintar(e){
+    let bloque = e.currentTarget;
+    let origen = e.relatedTarget;
+    if(origen.id  != 'BODY'){
+        bloque.style.background = origen.style.background;
+        }
+    else{
+        bloque.style.background = 'white';
+        }
+}
+                    </code>
+                    </pre>
+                    </div>
+
+                    <style>
+                        .cuerpo{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 12rem;
+                        }
+
+                        .boton{
+                            width: 12rem;
+                            height: 6rem;
+                            border: 0.2em solid #000;
+                            border-radius: 0.5em;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            font-family: 'Orbitron', sans-serif;
+                            font-weight: bold;
+                            font-size: 1.5em;
+                            transition: background-color 0.4s;
+                            margin: 0.1rem;
+                        }
+                    </style>
+                    <p><b>Pon el mouse encima de un cuadro con color y suélto en el cuadro de en medio.</b></p>
+                    <div class="cuerpo">
+                        <div class="boton" style="background: lightblue;" id="c1">
+                            <!-- <p>BOTÓN 1</p> -->
+                        </div>
+                        <div class="boton" style="background: white" id="c2">
+                            <!-- <p>BOTÓN 2</p> -->
+                        </div>
+                        <div class="boton" style="background: steelblue;" id="c3">
+                            <!-- <p>BOTÓN 3</p> -->
+                        </div>
+                    </div>
+                    </section>
+
+                    <section class="docs-section" id="item-1-4">
+                      <h2 class="section-heading">DOM navegation</h2>
+                      <p>De acuerdo con el estándar de HTML DOM, todo lo que se encuentra en un documento HTML se considera un nodo, motivo por el cual se lo denomina "Nodo de documento". La estructura de un Nodo de documento se conoce como árbol de nodos, y en él podemos encontrar diferentes tipos de nodos, como el nodo de elemento, nodo de atributo, nodo de texto, nodo de comentario, entre otros. Estos nodos están jerárquicamente relacionados entre sí de la siguiente manera:</p>
+
+                    <ul>
+                        <li>En un árbol de nodos, el nodo superior se llama raíz (o nodo raíz)</li>
+                            <li>Cada nodo tiene exactamente un padre, excepto la raíz (que no tiene padre)</li>
+                            <li>Un nodo puede tener varios hijos.</li>
+                            <li>Los hermanos/as son nodos con el mismo padre</li>
+                        </ul>
+                        <p>Como se puede observar en la imagen a continuación, existen diversas propiedades que permiten la navegación a través de la estructura del árbol de nodos, lo cual facilita su edición.</p>
+                        <center><img src="../images/navegacion.png" class="img-fluid img-thumbnail"></center>
+                        <p> Entre dichas propiedades, tenemos:</p>
+                        <center><img src="../images/propiedades.png" class="img-fluid img-thumbnail"></center>
+
+
+                        <h4 class="heading" style="padding-top:1%">Ejemplo</h4>
+
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs">function myFunction2() {
+var main = document.getElementById("main");
+console.log(main.firstElementChild.nodeName); // Prints: H1
+main.firstElementChild.style.color = "red";
+
+var hint = document.getElementById("hint");
+console.log(hint.firstElementChild.nodeName); // Prints: SPAN
+hint.firstElementChild.style.color = "blue";
+}
+</code></pre>
+
+                        </div>
+                        <!--//docs-code-block-->
+                        <h3>Demo</h3>
+                        
+                        <div id="main">
+                            <h1 id="title">Grupo Nro.4</h1>
+                            <p id="hint"><span>Este es un ejemplo de Navegación</span></p>
+                        </div>
+                        <br>
+                        <button onclick="myFunction2()">Ejecutar</button>
+                    </section>
+
+                    <section class="docs-section" id="item-1-5">
+                      <h2 class="section-heading">DOM nodes</h2>
+                      <p>Los nodos del DOM son los componentes básicos que conforman la estructura de un documento HTML. Cada elemento HTML, atributo, texto y comentario se considera un nodo en el DOM. Se organizan en una estructura jerárquica de árbol, donde un nodo puede tener nodos hijos y un nodo puede tener un nodo padre. Los tipos de nodos incluyen elementos, texto, atributos y comentarios. Los nodos del DOM permiten acceder y manipular los elementos de una página web utilizando JavaScript para actualizar dinámicamente el contenido y la apariencia de la página.
+                      Ejemplo:</p>
+
+                    <div class="docs-code-block">
+                    <pre class="shadow-lg rounded">
+                    <code class="javascript hljs">
+function modifyElements() {
+    var parent = document.getElementById("paragraphs");
+
+    // Remove two paragraphs
+    var paragraphs = parent.querySelectorAll("p");
+    if (paragraphs.length >= 2) {
+        parent.removeChild(paragraphs[0]);
+        parent.removeChild(paragraphs[1]);
+    }
+
+    // Add a new paragraph
+    var newParagraph = document.createElement("p");
+    var textNode = document.createTextNode("This is a new paragraph.");
+    newParagraph.appendChild(textNode);
+    parent.appendChild(newParagraph);
+}
+                    </code>
+                    </pre>
+                    </div>
+
+                    <h3>Demo</h3>
+
+                  <div id="paragraphs">
+                    <p>Las zanahorias dominaran a los veganos.</p>
+                    <p>Cada vez que te aguasta un estornudo puede romperse tu costilla.</p>
+                  </div>
+
+                  <button onclick="modifyElements()">Quitar elementos y añadir elementos</button>
+                  </section>
+
+                  <section class="docs-section" id="item-1-6">
+                  <h2 class="section-heading">DOM Collections</h2>
+                  <p>Las colecciones del DOM en JavaScript son conjuntos de elementos HTML que se pueden acceder y manipular mediante programación. Representan grupos de elementos relacionados y proporcionan métodos y propiedades para interactuar con ellos de manera eficiente. Se obtienen utilizando métodos como getElementsByTagName, getElementsByClassName o querySelectorAll. Las colecciones son objetos similares a arrays que se pueden recorrer y modificar. Son dinámicas y se actualizan automáticamente. Además de las colecciones de elementos, hay otras colecciones para acceder y manipular diferentes tipos de nodos en el DOM.</p>
+
+                <style>
+                    .resaltado {
+                      color: #9A17EB;
+                      font-weight: bold;
+                    }
+                </style>
+
+                  <div class="docs-code-block">
+                    <pre class="shadow-lg rounded"><code class="javascript hljs">function agregarClase() {
+                  var elementos = document.getElementsByClassName("elemento");
+
+                  for (var i = 0; i < elementos.length; i++) {
+                    elementos[i].classList.add("resaltado");
+                  }
+                }
+
+                function eliminarElementos() {
+                  var elementos = document.getElementsByClassName("elemento");
+
+                  while (elementos.length > 0) {
+                    elementos[0].parentNode.removeChild(elementos[0]);
+                  }
+                }
+
+                function cambiarTexto() {
+                  var elementos = document.getElementsByClassName("elemento");
+
+                  for (var i = 0; i < elementos.length; i++) {
+                    elementos[i].innerText = "¡Texto cambiado!";
+                  }
+                }
+                    </code></pre>
+                  </div>
+
+                  <h3>Demo</h3>
+
+                  <p>Clickealos botones para agregar una clase a los elementos:</p>
+
+                <p class="elemento">Manzana</p>
+                <p class="elemento">Platano</p>
+                <p class="elemento">Melon</p>
+                <p class="elemento">Sandia</p>
+                <p class="elemento">Naranja</p>
+
+                <button onclick="agregarClase()">Agregar Clase</button>
+                <button onclick="ocultarElementos()">Ocultar Elementos</button>
+                <button onclick="mostrarElementos()">Mostrar Elementos</button>
+                <button onclick="cambiarTexto()">Cambiar Texto</button>
+
+                </section>
+
+                <section class="docs-section" id="item-1-7">
+                            <h2 class="section-heading">Listas de Nodos DOM</h2>
+                            <p>Una NodeList en el Document Object Model (DOM) es una colección de nodos que representa una lista ordenada de elementos encontrados en el documento HTML. La NodeList se obtiene al ejecutar métodos de navegación del DOM, como getElementsByTagName(), getElementsByClassName(), querySelectorAll(), entre otros.</p>
+                            <p>La NodeList se parece a un array, pero no es un array real. Es una colección "viva" y dinámica, lo que significa que si se realizan cambios en el DOM, la NodeList se actualizará automáticamente para reflejar esos cambios.</p>
+                <style>
+                  .destacado {
+                    background-color: yellow;
+                    color: blue;
+                  }
+                </style>
+
+                            <h4 class="heading" style="padding-top:1%">Ejemplo</h4>
+
+                            <div class="docs-code-block">
+                                <pre class="shadow-lg rounded"><code class="javascript hljs">function myFunction() {
+        // Obtenemos una lista de nodos de todos los párrafos dentro del div con id "contenedor"
+        var nodos = document.querySelectorAll("#conte p");
+
+        // Iteramos sobre la NodeList y aplicamos el estilo destacado a cada nodo
+        for (var i = 0; i < nodos.length; i++) {
+          nodos[i].classList.add("destacado");
+        }
+      }
+</code></pre>
+
+                            </div>
+                            <!--//docs-code-block-->
+                            <h3>Demo</h3>
+                            
+                            <div id="conte">
+                              <p>Texto 1</p>
+                              <p>Texto 2</p>
+                              <p>Texto 3</p>
+                            </div>
+                            <br>
+                            <button onclick="myFunction()">Ejecutar</button>
+
+                        </section>
+                        <!--//section-->
+                
+
+                    <footer class="footer">
+                        <div class="container text-center py-5">
+                            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+                            <small class="copyright">Template diseñado por <a class="theme-link"
+                                    href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley.</a></small>
+                            <ul class="social-list list-unstyled pt-4 mb-0">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/"><i
+                                            class="fab fa-facebook-f fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/"><i
+                                            class="fab fa-instagram fa-fw"></i></a></li>
+                            </ul>
+                            <!--//social-list-->
+                        </div>
+                    </footer>
+            </div>
+        </div>
+    </div>
+    <!--//docs-wrapper-->
+
+
+    <!-- Javascript -->
+    <script src="../assets/plugins/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <!-- Page Specific JS -->
+    <script src="../assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="../assets/js/highlight-custom.js"></script>
+    <script src="../assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="../assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="../assets/js/docs.js"></script>
+    <script src="../assets/plugins/codigo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <!-- SCROOLL REVEAL SCRIPT -->
+    <script>
+        window.sr = ScrollReveal();
+
+        sr.reveal('#item-1-1', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('#item-1-2', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#item-1-3', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('#item-1-4', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#item-1-5', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('#item-1-6', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#item-1-7', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('.docs-header', {
+            duration: 2000,
+            origin: 'top',
+            distance: '300px'
+        });
+
+
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // funcion para el dom animations
+        function myMove() {
+              let id = null;
+              const elem = document.getElementById("animate");   
+              let pos = 0;
+              clearInterval(id);
+              id = setInterval(frame, 5);
+              function frame() {
+                if (pos == 250) {
+                  clearInterval(id);
+                  elem.classList.add("circle");
+                  id = setInterval(reverseFrame, 5);
+                } else {
+                  pos++; 
+                  elem.style.top = pos + "px"; 
+                  elem.style.left = pos + "px"; 
+                }
+              }
+
+              function reverseFrame() {
+                if (pos == 0) {
+                  clearInterval(id);
+                  elem.classList.remove("circle");
+                } else {
+                  pos--;
+                  elem.style.top = pos + "px";
+                  elem.style.left = pos + "px";
+                }
+              }
+            }
+
+        // funcion para el dom event
+            function mDown(obj) {
+              obj.style.backgroundColor = "lightblue";
+              obj.style.borderRadius = "50%";
+              obj.innerHTML = "Suéltame";
+            }
+
+            function mUp(obj) {
+              obj.style.backgroundColor="steelblue";
+              obj.style.borderRadius = "";
+              obj.innerHTML="Gracias :)";
+            }
+
+        // funcion para el dom event listener
+            c2.addEventListener('mouseenter', pintar); 
+            function pintar(e){
+            let bloque = e.currentTarget;
+            let origen = e.relatedTarget;
+            if(origen.id  != 'BODY'){
+                bloque.style.background = origen.style.background;
+                }
+            else{
+                bloque.style.background = 'white';
+                }
+            }
+
+        // funcion para el dom nodes
+            function modifyElements() {
+              var parent = document.getElementById("paragraphs");
+
+              // Remove two paragraphs
+              var paragraphs = parent.querySelectorAll("p");
+              if (paragraphs.length >= 2) {
+                parent.removeChild(paragraphs[0]);
+                parent.removeChild(paragraphs[1]);
+              }
+
+              // Add a new paragraph
+              var newParagraph = document.createElement("p");
+              var textNode = document.createTextNode("PUM APARECE EPICAMENTE EN EL CHAT");
+              newParagraph.appendChild(textNode);
+              parent.appendChild(newParagraph);
+            }
+
+        // funcion para el dom navegation
+            function myFunction2() {
+                var main = document.getElementById("main");
+                console.log(main.firstElementChild.nodeName); // Prints: H1
+                main.firstElementChild.style.color = "red";
+
+                var hint = document.getElementById("hint");
+                console.log(hint.firstElementChild.nodeName); // Prints: SPAN
+                hint.firstElementChild.style.color = "blue";
+                }
+
+        // funcion para el dom node list
+            function myFunction() {
+        // Obtenemos una lista de nodos de todos los párrafos dentro del div con id "contenedor"
+        var nodos = document.querySelectorAll("#conte p");
+
+        // Iteramos sobre la NodeList y aplicamos el estilo destacado a cada nodo
+        for (var i = 0; i < nodos.length; i++) {
+          nodos[i].classList.add("destacado");
+        }
+      }
+
+        // funcion para el dom collections
+        function agregarClase() {
+          var elementos = document.getElementsByClassName("elemento");
+
+          for (var i = 0; i < elementos.length; i++) {
+            elementos[i].classList.add("resaltado");
+          }
+        }
+
+        function ocultarElementos() {
+          var elementos = document.querySelectorAll(".elemento");
+
+          for (var i = 0; i < elementos.length; i++) {
+            elementos[i].style.display = "none";
+          }
+        }
+
+        function cambiarTexto() {
+          var elementos = document.getElementsByClassName("elemento");
+
+          for (var i = 0; i < elementos.length; i++) {
+            elementos[i].innerText = "Texto cambiado";
+          }
+        }
+
+        function mostrarElementos() {
+          var elementos = document.querySelectorAll(".elemento");
+
+          for (var i = 0; i < elementos.length; i++) {
+            elementos[i].style.display = "block";
+          }
+        }
+    </script>
+</body>
+
+</html>
